@@ -1,0 +1,129 @@
+\documentclass[a4paper]{article}
+\renewcommand{\baselinestretch}{0.9} %spacing between lines
+
+\usepackage{verbatim} %multiline comments
+
+\usepackage{lipsum} %create dummy text
+
+%generate geometry of paper
+\usepackage[landscape]{geometry}
+\geometry{
+     total={210mm,297mm},
+     left=2mm,
+     right=2mm,
+     top=15mm,
+     bottom=0mm,
+ }
+\usepackage[utf8]{inputenc}
+\usepackage[normalem]{ulem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{mathtools}
+\usepackage[ngerman]{babel}
+
+\usepackage{multicol} %multiple columns
+\usepackage{wrapfig} %wrap text around figures
+
+%get rid of spacing between lists
+\usepackage{enumitem} 
+    \setlist{nolistsep}
+
+%imagepackage
+\usepackage{graphicx} 
+    \graphicspath{ {./images/} }
+
+\usepackage{parskip} %Einzug aus, Absatzabstand ein
+    \tolerance=2000 %Toleranz für Wortzwischenräume
+    \setlength{\emergencystretch}{20pt} %Zusätzliche Zeilendehnbarkeit in Notfällen
+    \setlength\parindent{0pt}
+    \setlength{\columnseprule}{1px} %thickness of column seperator
+
+%New Titles
+\usepackage{tcolorbox}
+    \definecolor{seccol}{RGB}{7, 61, 50}
+    \definecolor{subseccol}{RGB}{29, 120, 116}
+    \definecolor{subsubseccol}{RGB}{103, 146, 137}
+% Section
+\renewcommand{\section}[1]{
+	\begin{tcolorbox}[
+			arc=0mm,
+			colback=seccol,
+			colframe=white,
+			bottomrule = 0 mm,
+			toprule = 0 mm,
+			leftrule = 0 mm,
+			rightrule = 0 mm,
+			valign=center,
+			left=0.5mm,
+			top= 0.2 mm,
+			bottom= 0.2 mm,
+			fontupper=\color{white},
+			before skip = 2mm,
+			leftright skip = -0.5mm,
+			after skip = 0 mm]
+
+		\textbf{#1}
+	\end{tcolorbox}
+}
+	
+% Subsection	
+\renewcommand{\subsection}[1]{
+	\begin{tcolorbox}[
+			arc=0mm,
+			colback=subseccol,
+			colframe=white,
+			bottomrule = 0 mm,
+			toprule = 0 mm,
+			leftrule = 0 mm,
+			rightrule = 0 mm,
+			valign=center,
+			left=0.5mm,
+			top=0.2mm,
+			bottom=0.2mm,
+			fontupper=\color{white},
+			before skip = 0.5mm,
+			leftright skip = -0.5mm,
+			after skip = 0.5 mm]
+			
+		\small \textbf{#1:}
+	\end{tcolorbox}
+}
+	
+% Subsubsection	
+\renewcommand{\subsubsection}[1]{
+	\begin{tcolorbox}[
+			arc=0mm,
+			colback=subsubseccol,
+			colframe=white,
+			bottomrule = 0 mm,
+			toprule = 0 mm,
+			leftrule = 0 mm,
+			rightrule = 0 mm,
+			valign=center,
+			left=0.5mm,
+			top=-0.2mm,
+			bottom=-0.2mm,
+			fontupper=\color{white},
+			before skip = 0.5mm,
+			leftright skip = -0.5mm,
+			after skip = 0.5 mm]
+			
+		\small \textbf{#1:}
+	\end{tcolorbox}
+}
+\newcommand{\TODO}[1]{\large\textcolor{red}{\textbf{TODO: #1\\}}\normalsize}
+
+%custom header with title & authors
+\usepackage{fancyhdr} 
+    \pagestyle{fancy}
+    \fancyhf{}
+    \rhead{Joshua Näf, \textit{naefjo@ethz.ch}}
+    \lhead{\textbf{Summary Template}}
+    \setlength{\headsep}{1mm}
+    
+\title{Summary Template}
+\author{Joshua Näf}
+\date{}
