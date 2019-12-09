@@ -1,0 +1,31 @@
+\usepackage[explicit]{titlesec}
+
+\titleformat{\section}
+  {\normalfont\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{seccol}{
+        \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+            \textcolor{white}{\thesection\quad#1}}}
+    \pgfsetfillopacity{1}}
+  
+\titleformat{\subsection}
+  {\normalfont\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{subseccol}{
+        \parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+            \textcolor{white}{\thesubsection\quad#1:}}}
+    \pgfsetfillopacity{1}}
+
+\titleformat{\subsubsection}
+  {\normalfont\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{subsubseccol}{
+        \parbox{\dimexpr\linewidth-2\fboxsep\relax}
+            {\textcolor{white}{\thesubsubsection\quad#1:}}}
+    \pgfsetfillopacity{1}}

@@ -46,74 +46,44 @@
     \definecolor{seccol}{RGB}{7, 61, 50}
     \definecolor{subseccol}{RGB}{29, 120, 116}
     \definecolor{subsubseccol}{RGB}{103, 146, 137}
-% Section
-\renewcommand{\section}[1]{
-	\begin{tcolorbox}[
-			arc=0mm,
-			colback=seccol,
-			colframe=white,
-			bottomrule = 0 mm,
-			toprule = 0 mm,
-			leftrule = 0 mm,
-			rightrule = 0 mm,
-			valign=center,
-			left=0.5mm,
-			top= 0.2 mm,
-			bottom= 0.2 mm,
-			fontupper=\color{white},
-			before skip = 2mm,
-			leftright skip = -0.5mm,
-			after skip = 0 mm]
 
-		\textbf{#1}
-	\end{tcolorbox}
-}
-	
-% Subsection	
-\renewcommand{\subsection}[1]{
-	\begin{tcolorbox}[
-			arc=0mm,
-			colback=subseccol,
-			colframe=white,
-			bottomrule = 0 mm,
-			toprule = 0 mm,
-			leftrule = 0 mm,
-			rightrule = 0 mm,
-			valign=center,
-			left=0.5mm,
-			top=0.2mm,
-			bottom=0.2mm,
-			fontupper=\color{white},
-			before skip = 0.5mm,
-			leftright skip = -0.5mm,
-			after skip = 0.5 mm]
-			
-		\small \textbf{#1:}
-	\end{tcolorbox}
-}
-	
-% Subsubsection	
-\renewcommand{\subsubsection}[1]{
-	\begin{tcolorbox}[
-			arc=0mm,
-			colback=subsubseccol,
-			colframe=white,
-			bottomrule = 0 mm,
-			toprule = 0 mm,
-			leftrule = 0 mm,
-			rightrule = 0 mm,
-			valign=center,
-			left=0.5mm,
-			top=-0.2mm,
-			bottom=-0.2mm,
-			fontupper=\color{white},
-			before skip = 0.5mm,
-			leftright skip = -0.5mm,
-			after skip = 0.5 mm]
-			
-		\small \textbf{#1:}
-	\end{tcolorbox}
-}
+\usepackage[explicit]{titlesec}
+
+\titleformat{\section}
+  {\normalfont\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{seccol}{
+        \parbox{\dimexpr\linewidth-4.5\fboxsep\relax}{
+            \textcolor{white}{\thesection\quad#1}}}
+    \pgfsetfillopacity{1}}
+  
+\titleformat{\subsection}
+  {\normalfont\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{subseccol}{
+        \parbox{\dimexpr\linewidth-4.5\fboxsep\relax}{
+            \textcolor{white}{\thesubsection\quad#1:}}}
+    \pgfsetfillopacity{1}}
+
+\titleformat{\subsubsection}
+  {\normalfont\bfseries}
+  {}
+  {0em}
+  {\pgfsetfillopacity{1}
+    \colorbox{subsubseccol}{
+        \parbox{\dimexpr\linewidth-4.5\fboxsep\relax}
+            {\textcolor{white}{\thesubsubsection\quad#1:}}}
+    \pgfsetfillopacity{1}}
+    
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}    
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+
+%TODO command    
 \newcommand{\TODO}[1]{\large\textcolor{red}{\textbf{TODO: #1\\}}\normalsize}
 
 %custom header with title & authors
