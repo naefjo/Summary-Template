@@ -1,4 +1,5 @@
 \documentclass[a4paper]{article}
+\setcounter{page}{0}
 \renewcommand{\baselinestretch}{0.9} %spacing between lines
 
 \usepackage{verbatim} %multiline comments
@@ -79,20 +80,21 @@
             {\textcolor{white}{\thesubsubsection\quad#1:}}}
     \pgfsetfillopacity{1}}
     
-\titlespacing{\section}{0pt}{\parskip}{-\parskip}    
-\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
-\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
-
-%TODO command    
-\newcommand{\TODO}[1]{\large\textcolor{red}{\textbf{TODO: #1\\}}\normalsize}
+\titlespacing{\section}{0pt}{\parskip}{-0.75\parskip}    
+\titlespacing{\subsection}{0pt}{\parskip}{-0.75\parskip}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-0.75\parskip}
 
 %custom header with title & authors
 \usepackage{fancyhdr} 
     \pagestyle{fancy}
     \fancyhf{}
     \rhead{Joshua Näf, \textit{naefjo@ethz.ch}}
+    \chead{\textbf{\thepage}}
     \lhead{\textbf{Summary Template}}
     \setlength{\headsep}{1mm}
+    
+%TODO command    
+\newcommand{\TODO}[1]{\large\textcolor{red}{\textbf{TODO: #1\\}}\normalsize}
     
 \title{Summary Template}
 \author{Joshua Näf}
