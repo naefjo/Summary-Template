@@ -1,3 +1,4 @@
+different section header styles
 \usepackage[explicit]{titlesec}
 
 \titleformat{\section}
