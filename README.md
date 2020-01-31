@@ -1,6 +1,9 @@
 # Summary-Template
 Use this template to create your own summaries.
 
+![Example 1](screenshots/example1.jpg?raw=true "Example 1")
+![Example 2](screenshots/example2.jpg?raw=true "Example 2")
+
 # How-to
 ## Using GitHub:
 Click on "Use this Template" and create a new Repository. Now go to Overleaf and create a new Project by importing your newly created Repository from GitHub.
