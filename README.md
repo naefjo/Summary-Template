@@ -1,8 +1,8 @@
 # Summary-Template
 Use this template to create your own summaries.
 
-![Example 1](screenshots/example1.jpg?raw=true "Example 1")
-![Example 2](screenshots/example2.jpg?raw=true "Example 2")
+![Example 1](screenshots/example1.jpg?raw=true "Example 1" | width=200)
+![Example 2](screenshots/example2.jpg?raw=true "Example 2" | width=200)
 
 # How-to
 ## Using GitHub:
