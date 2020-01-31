@@ -1,7 +1,7 @@
 # Summary-Template
 Use this template to create your own summaries.
 
-![Example 1](screenshots/example1.jpg?raw=true | width=200)
+![Example 1](screenshots/example1.jpg?raw=true =300x)
 ![Example 2](screenshots/example2.jpg?raw=true | width=200)
 
 # How-to
